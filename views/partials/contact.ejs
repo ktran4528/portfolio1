@@ -1,0 +1,44 @@
+<%- include header.ejs %>
+<%- include nav.ejs %>
+<main class = "container">
+<div class = "row">
+<div class = "col-md-offset-1 col-md-10">
+<h1><%= title %></h1>
+<a href="/contactList/add" class = "btn btn-primary" role="button">
+<i class ="fas fa-plus-circle"></i>Add a Contact</a>
+<br>
+<table class = "table table-bordered table-striped table-hover" b>
+
+<tr>
+<th class = "text-center col-2">Name</th>
+<th class = "text-center col-2">Phone Number</th>
+<th class = "text-center col-2">Email</th>
+<th class = "text-center col-2"></th>
+<th class = "text-center col-2"></th>
+
+</tr>
+
+<% for (let i = 0; i < ContactList.length; i++){ %>
+   
+    <tr>
+    <td class ="text-center col-2"><%=ContactList[i].name%></td>
+    <td class ="text-center col-2"><%=ContactList[i].number%></td>  
+    <td class ="text-center col-2"><%=ContactList[i].email%></td> 
+    <td class = "text-center col-2">
+    <a href ="/contactList/edit/ <%=ContactList[i]._id%>" class = "btn btn-primary">
+    <i class = "fas fa-pencil-alt"> </i>Edit</a>
+    </td>
+    <td class = "text-center col-2">
+    <a href="/contactList/delete/<%=ContactList[i]._id%>" class="btn btn-danger">
+    <i class="fas fa-trash-alt"></i>Delete</a>
+    </td>
+    </tr>
+<%}%>
+</table>
+</div>
+</div>
+</main
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+T
